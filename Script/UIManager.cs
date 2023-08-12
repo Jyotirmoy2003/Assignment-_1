@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
             for (int i=0;i<length;i++)
             {
                 //if not manager return
-                if(!root.clients[i].isManager) return;
+                if(!root.clients[i].isManager) continue;
                 ClientDataHandeler dataHandeler=Instantiate(clientData,clientListContainer).GetComponent<ClientDataHandeler>();
 
                 //send the Root and index
@@ -76,7 +76,7 @@ public class UIManager : MonoBehaviour
             for (int i=0;i<length;i++)
             {
                 //if not manager return
-                if(root.clients[i].isManager) return;
+                if(root.clients[i].isManager) continue;
                 ClientDataHandeler dataHandeler=Instantiate(clientData,clientListContainer).GetComponent<ClientDataHandeler>();
 
                 //send the Root and index
